@@ -9,14 +9,15 @@ export default function Courses() {
   const [loading, setLoading] = useState(false)
 
   const load = async () => {
+    if (!email) return
     try {
-      const res = await fetch(`${API}/api/courses/${email}`)
+      const res = await fetch(`${API}/api/courses/${encodeURIComponent(email)}`)
       const data = await res.json()
       setItems(Array.isArray(data) ? data : [])
     } catch {}
   }
 
-  useEffect(() => { load() }, [])
+  useEffect(() => { load() }, [email])
 
   const add = async (e) => {
     e.preventDefault()

@@ -1,29 +1,47 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
 
 const API = import.meta.env.VITE_BACKEND_URL || ''
 
 export default function Profile() {
-  const { state } = useLocation()
-  const [email, setEmail] = useState(state?.email || 'demo@student.edu')
+  const [email, setEmail] = useState(() => localStorage.getItem('email') || 'demo@student.edu')
   const [profile, setProfile] = useState({ name: '', major: '', year: '', avatar: '' })
   const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
 
   const load = async () => {
+    setError('')
+    if (!email) return
     try {
-      const res = await fetch(`${API}/api/login`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, password: 'ignored' }) })
+      const res = await fetch(`${API}/api/profile/${encodeURIComponent(email)}`)
+      if (!res.ok) throw new Error('Unable to load profile')
       const data = await res.json()
-      if (data && data.profile) setProfile(data.profile)
-    } catch (e) {}
+      setProfile({
+        name: data.name || '',
+        major: data.major || '',
+        year: data.year || '',
+        avatar: data.avatar || ''
+      })
+      if (data.name) localStorage.setItem('name', data.name)
+    } catch (e) {
+      setError(e.message)
+    }
   }
 
-  useEffect(() => { load() }, [])
+  useEffect(() => { load() }, [email])
 
   const save = async () => {
     setSaving(true)
+    setError('')
     try {
-      await fetch(`${API}/api/profile/${email}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(profile) })
-    } catch (e) {} finally { setSaving(false) }
+      const res = await fetch(`${API}/api/profile/${encodeURIComponent(email)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(profile)
+      })
+      if (!res.ok) throw new Error('Failed to save')
+      const data = await res.json()
+      if (data?.name) localStorage.setItem('name', data.name)
+    } catch (e) { setError(e.message) } finally { setSaving(false) }
   }
 
   return (
@@ -55,6 +73,7 @@ export default function Profile() {
             <input value={profile.avatar || ''} onChange={e=>setProfile({...profile, avatar:e.target.value})} className="w-full px-3 py-2 rounded-lg bg-slate-900/60 border border-white/10 text-white outline-none" />
           </div>
         </div>
+        {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
         <button onClick={save} className="mt-4 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white">
           {saving ? 'Saving...' : 'Save changes'}
         </button>

@@ -3,24 +3,24 @@
 > vite
 
 
-  VITE v5.4.20  ready in 268 ms
+  VITE v5.4.20  ready in 260 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.9.191:3000/
-7:37:44 AM [vite] Pre-transform error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:20:92: ERROR: Expected identifier after "http:" in namespaced JSX name
-7:37:44 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:20:92: ERROR: Expected identifier after "http:" in namespaced JSX name
+7:41:21 AM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/App.jsx:21:92: ERROR: Expected identifier after "http:" in namespaced JSX name
+7:41:21 AM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/App.jsx:21:92: ERROR: Expected identifier after "http:" in namespaced JSX name
   Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx:20:92
+  File: /home/workspace/src/App.jsx:21:92
   
   Expected identifier after "http:" in namespaced JSX name
-  18 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
-  19 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
-  20 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
+  19 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
+  20 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
+  21 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
      |                                                                                              ^
-  21 |        </div>
-  22 |  
+  22 |        </div>
+  23 |  
   
       at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
       at /home/workspace/node_modules/esbuild/lib/main.js:755:50
@@ -32,18 +32,18 @@
       at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
       at Readable.push (node:internal/streams/readable:390:5)
       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-7:38:12 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:20:92: ERROR: Expected identifier after "http:" in namespaced JSX name
+7:41:37 AM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/App.jsx:21:92: ERROR: Expected identifier after "http:" in namespaced JSX name
   Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx:20:92
+  File: /home/workspace/src/App.jsx:21:92
   
   Expected identifier after "http:" in namespaced JSX name
-  18 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
-  19 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
-  20 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
+  19 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
+  20 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
+  21 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
      |                                                                                              ^
-  21 |        </div>
-  22 |  
+  22 |        </div>
+  23 |  
   
       at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
       at /home/workspace/node_modules/esbuild/lib/main.js:755:50
@@ -55,41 +55,18 @@
       at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
       at Readable.push (node:internal/streams/readable:390:5)
       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-7:38:31 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:20:92: ERROR: Expected identifier after "http:" in namespaced JSX name
+7:41:46 AM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/App.jsx:21:92: ERROR: Expected identifier after "http:" in namespaced JSX name
   Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx:20:92
+  File: /home/workspace/src/App.jsx:21:92
   
   Expected identifier after "http:" in namespaced JSX name
-  18 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
-  19 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
-  20 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
+  19 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
+  20 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
+  21 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
      |                                                                                              ^
-  21 |        </div>
-  22 |  
-  
-      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
-      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
-      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
-      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
-      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
-      at Socket.emit (node:events:508:28)
-      at addChunk (node:internal/streams/readable:559:12)
-      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
-      at Readable.push (node:internal/streams/readable:390:5)
-      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-7:38:38 AM [vite] Internal server error: Transform failed with 1 error:
-/home/workspace/src/App.jsx:20:92: ERROR: Expected identifier after "http:" in namespaced JSX name
-  Plugin: vite:esbuild
-  File: /home/workspace/src/App.jsx:20:92
-  
-  Expected identifier after "http:" in namespaced JSX name
-  18 |          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_0%,rgba(59,130,246,0.25),transparent_60%)]" />
-  19 |          <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(59,130,246,0.08),transparent),linear-gradient(245deg,rgba(147,197,253,0.06),transparent)]" />
-  20 |          <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><path fill=\"%231e293b\" d=\"M0 39h40v1H0zM39 0v40h1V0z\"/></svg>')] opacity-40 mix-blend-overlay" />
-     |                                                                                              ^
-  21 |        </div>
-  22 |  
+  22 |        </div>
+  23 |  
   
       at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
       at /home/workspace/node_modules/esbuild/lib/main.js:755:50

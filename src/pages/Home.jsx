@@ -5,7 +5,7 @@ const API = import.meta.env.VITE_BACKEND_URL || ''
 const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri']
 
 export default function Home() {
-  const [email, setEmail] = useState('demo@student.edu')
+  const [email, setEmail] = useState(() => localStorage.getItem('email') || 'demo@student.edu')
   const [items, setItems] = useState([])
   const [title, setTitle] = useState('Study Session')
   const [day, setDay] = useState('Mon')
@@ -13,14 +13,15 @@ export default function Home() {
   const [end, setEnd] = useState('12:00')
 
   const load = async () => {
+    if (!email) return
     try {
-      const res = await fetch(`${API}/api/schedule/${email}`)
+      const res = await fetch(`${API}/api/schedule/${encodeURIComponent(email)}`)
       const data = await res.json()
       setItems(Array.isArray(data) ? data : [])
     } catch (e) {}
   }
 
-  useEffect(() => { load() }, [])
+  useEffect(() => { load() }, [email])
 
   const add = async (e) => {
     e.preventDefault()

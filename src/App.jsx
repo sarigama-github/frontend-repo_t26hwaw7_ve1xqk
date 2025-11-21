@@ -9,6 +9,7 @@ import Register from './pages/Register'
 import Profile from './pages/Profile'
 import Login from './pages/Login'
 import Courses from './pages/Courses'
+import ProtectedRoute from './components/ProtectedRoute'
 import './index.css'
 
 function App() {
@@ -25,12 +26,12 @@ function App() {
         <main className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-8">
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
             <Route path="/about" element={<About />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/courses" element={<Courses />} />
+            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+            <Route path="/courses" element={<ProtectedRoute><Courses /></ProtectedRoute>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
