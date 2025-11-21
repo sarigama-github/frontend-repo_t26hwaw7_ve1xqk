@@ -7,6 +7,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
+import Login from './pages/Login'
+import Courses from './pages/Courses'
 import './index.css'
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/courses" element={<Courses />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
